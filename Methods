@@ -1,0 +1,26 @@
+Methods
+
+As you might expect, Ruby allows you to define your own methods.
+
+def say_hello
+  puts "Hello, world!"
+end
+
+A method can also take one or more arguments.
+
+def greet(someone)
+  puts "Hello, #{someone}!"
+end
+
+You can supply default arguments to your methods.
+
+def greet(someone="world")
+  puts "Hello, #{someone}!"
+end
+greet
+# Hello, world!
+
+You will commonly find yourself supplying more than one argument to your methods.
+
+def foo(bar, boo, baz)
+end

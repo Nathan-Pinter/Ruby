@@ -1,0 +1,19 @@
+Control Flow
+
+There are many times that you will wish to control what part of your application executes based on some condition.
+
+if condition
+  # do something
+end
+There are times that you will want to do something if the condition is true, and if it is false, something else entirely.
+
+if condition
+  # do something
+else
+  # do something else entirely
+end
+There are times that you will want to do something unless a condition is true.
+
+unless condition
+  # do something
+end

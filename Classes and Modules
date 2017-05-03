@@ -1,0 +1,72 @@
+Classes
+
+A class is like a blueprint for an object. It defines the data and behaviour that will describe an object.
+
+class Speaker
+  def initialize
+    @utterance = "Hello, World!"
+  end
+
+  def speak
+    puts @utterance
+  end
+end
+
+speaker = Speaker.new
+speaker.speak
+# Hello, World!
+
+Above, we created an instance, speaker, of our class, Speaker.
+
+Modules
+
+Modules provide a way to include and share behaviour in your classes and objects while still organising your application in a modular way. They are similar to classes, except you cannot create an instance of a module. You can merely include (or "mix in") the functionality into other objects.
+
+module Talkative
+  def speak
+    puts "Hello, this is #{self.class}!"
+  end
+end
+
+class Human
+  include Talkative
+end
+
+class Dog
+  include Talkative
+end
+
+Human.new.speak
+# Hello, this is Human!
+Dog.new.speak
+# Hello, this is Dog!
+You may notice that our classes are named as nouns, and our modules are named as adjectives. This is the generally agreed upon convention as our classes can be instantiated to represent objects. They represent individuals. A human, a dog. Our modules represent behaviour, and when mixed in they represent a quality that can be ascribed to an object.
+
+I have just shown you how to include a module in a class. Now I shall show you that you can also prepend a module to a class.
+
+module Talkative
+  def speak
+    puts "Hello from the module!"
+  end
+end
+
+class Human
+  include Talkative
+
+  def speak
+    puts "Hello from the class!"
+  end
+end
+
+class Dog
+  prepend Talkative
+
+  def speak
+    puts "Hello from the class!"
+  end
+end
+
+Human.new.speak
+# Hello from the class!
+Dog.new.speak
+# Hello from the module!

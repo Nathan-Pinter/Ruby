@@ -1,0 +1,29 @@
+Loops
+
+for number in [1,2,3,4,5] do
+  # do something with number
+end
+
+This is the basic for loop. It is (almost) functionally equivalant to the each loop.
+
+[1,2,3,4,5].each do |number|
+  # do something with number
+end
+
+We have other types of loop, too.
+
+while conditional
+  # do something while conditional is true
+end
+
+until conditional
+  # do something until conditional is true
+end
+
+Left alone, these loops will continue to execute until their conditions evaluate to false or until their sequence is empty. There are other ways to terminate a loop early, should the need arise.
+
+while conditional
+  break # terminate the current loop
+  next  # skip to the next iteration of the loop
+  redo  # restart the current iteration
+end
